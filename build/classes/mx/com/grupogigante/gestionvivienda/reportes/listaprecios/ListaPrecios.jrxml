@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListaPrecios" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="906"/>
+	<property name="ireport.y" value="0"/>
+	<field name="equnr" class="java.lang.String"/>
+	<field name="fase" class="java.lang.String"/>
+	<field name="m2pr" class="java.lang.String"/>
+	<field name="m2ja" class="java.lang.String"/>
+	<field name="m2te" class="java.lang.String"/>
+	<field name="m2es" class="java.lang.String"/>
+	<field name="m2bo" class="java.lang.String"/>
+	<field name="sumaM2" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="visa" class="java.lang.String"/>
+	<field name="orie" class="java.lang.String"/>
+	<field name="nest" class="java.lang.String"/>
+	<field name="nbod" class="java.lang.String"/>
+	<field name="precioLista" class="java.lang.String"/>
+	<field name="pach" class="java.lang.String"/>
+	<field name="paco" class="java.lang.String"/>
+	<field name="pafi" class="java.lang.String"/>
+	<field name="stun" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="752" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE LISTA DE PRECIOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="119" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="48" height="15"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="15" width="71" height="15"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Casa / Depto.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="187" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="15" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2 Priv.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="15" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2 Jardin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="15" width="32" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2 Terraza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="15" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2 Est.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="15" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M2 Bod.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="15" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="0" width="130" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caracteristicas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="15" width="15" height="15"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="15" width="35" height="15"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vista a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="15" width="35" height="15"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Orientacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="15" width="25" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[# Estac.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="15" width="20" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[# Bod.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="79" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Lista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="15" width="79" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="0" width="183" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descuentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="15" width="61" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desc. CH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="15" width="61" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desc. CO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="637" y="15" width="61" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desc. FO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="698" y="0" width="54" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estatus]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="119" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="306" y="0" width="130" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="436" y="0" width="79" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="515" y="0" width="183" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="698" y="0" width="54" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="15" width="48" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="48" y="15" width="71" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="119" y="15" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="150" y="15" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="181" y="15" width="32" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="15" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="244" y="15" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="275" y="15" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="306" y="15" width="15" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="321" y="15" width="35" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="15" width="35" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="391" y="15" width="25" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="416" y="15" width="20" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="436" y="15" width="79" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="515" y="15" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="15" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="637" y="15" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="119" y="0" width="187" height="15"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="48" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fase}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="48" y="0" width="71" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{equnr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="0" width="28" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{m2pr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="0" width="28" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{m2ja}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="213" y="0" width="28" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{m2es}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="244" y="0" width="28" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{m2bo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="181" y="0" width="30" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{m2te}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="0" width="13" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="321" y="0" width="33" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{visa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="356" y="0" width="33" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{orie}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="0" width="23" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nest}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="0" width="18" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nbod}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="436" y="0" width="77" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{precioLista}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="515" y="0" width="59" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{pach}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="576" y="0" width="59" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{paco}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="637" y="0" width="59" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{pafi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="698" y="0" width="54" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{stun}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="276" y="0" width="28" height="15"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sumaM2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="48" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="48" y="0" width="71" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="181" y="0" width="32" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="119" y="0" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="150" y="0" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="213" y="0" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="244" y="0" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="275" y="0" width="31" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="306" y="0" width="15" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="321" y="0" width="35" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="0" width="35" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="391" y="0" width="25" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="416" y="0" width="20" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="436" y="0" width="79" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="515" y="0" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="0" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="637" y="0" width="61" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="698" y="0" width="54" height="15"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>Gestion de vivienda Grupo Gigante</display-name>
+  
+  <filter>
+    <filter-name>SqlAndXSSFilter</filter-name>
+    <filter-class>mx.com.grupogigante.gestionvivienda.seguridad.SqlInjectionAndXSSFilter</filter-class>
+    <init-param>
+      <param-name>properties_file</param-name>
+      <param-value>sql-xss-exclusion-filter.properties</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>SqlAndXSSFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+	<!-- context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j.xml</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener -->
+	
+  <servlet>
+    <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>
+				/WEB-INF/app-config.xml
+			</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+    <url-pattern>*.htm</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+  	<error-code>401</error-code>
+  	<location>/error/401.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/500.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>503</error-code>
+  	<location>/error/503.jsp</location>
+  </error-page>
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+  
+  
+    <security-constraint>
+	   <display-name>Lock Down HTTP Put</display-name>
+	   <web-resource-collection>
+	      <web-resource-name>LockDownPut</web-resource-name>
+	      <description>Disable HTTP Put for all web resources.</description>
+	      <url-pattern>/*</url-pattern>
+	      <http-method>PUT</http-method>
+	   </web-resource-collection>
+	</security-constraint> 
+	
+	<security-constraint>
+	   <display-name>Lock Down HTTP Delete</display-name>
+	   <web-resource-collection>
+	      <web-resource-name>LockDownDelete</web-resource-name>
+	      <description>Disable HTTP Delete for all web resources.</description>
+	      <url-pattern>/*</url-pattern>
+	      <http-method>DELETE</http-method>
+	   </web-resource-collection>
+	</security-constraint>
+	
+	<security-constraint>
+	   <display-name>Lock Down HTTP Options</display-name>
+	   <web-resource-collection>
+	      <web-resource-name>LockDownOptions</web-resource-name>
+	      <description>Disable HTTP Options for all web resources.</description>
+	      <url-pattern>/*</url-pattern>
+	      <http-method>OPTIONS</http-method>
+	   </web-resource-collection>
+	</security-constraint> 
+	
+	<security-constraint>
+	   <display-name>Lock Down HTTP Trace</display-name>
+	   <web-resource-collection>
+	      <web-resource-name>LockDownTrace</web-resource-name>
+	      <description>Disable HTTP Trace for all web resources.</description>
+	      <url-pattern>/*</url-pattern>
+	      <http-method>TRACE</http-method>
+	   </web-resource-collection>
+	</security-constraint>
+  
+</web-app>

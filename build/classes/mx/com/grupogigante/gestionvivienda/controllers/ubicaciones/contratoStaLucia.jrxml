@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1959"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D5CBBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFF4E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#DD6E6E">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6CFCF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F8F3F3"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1"/>
+	<subDataset name="Table Dataset 1"/>
+	<parameter name="apoderado1" class="java.lang.String"/>
+	<parameter name="apoderado2" class="java.lang.String"/>
+	<parameter name="campo1" class="java.lang.String"/>
+	<parameter name="numero" class="java.lang.String"/>
+	<parameter name="piso" class="java.lang.String"/>
+	<parameter name="superficie" class="java.lang.String"/>
+	<parameter name="lugarEsta" class="java.lang.String"/>
+	<parameter name="numsEsta" class="java.lang.String"/>
+	<parameter name="medidas1" class="java.lang.String"/>
+	<parameter name="medidas2" class="java.lang.String"/>
+	<parameter name="folio" class="java.lang.String"/>
+	<parameter name="edoCivil" class="java.lang.String"/>
+	<parameter name="rfc" class="java.lang.String"/>
+	<parameter name="domicilio" class="java.lang.String"/>
+	<parameter name="precio" class="java.lang.String"/>
+	<parameter name="engm" class="java.lang.String"/>
+	<parameter name="engp" class="java.lang.String"/>
+	<parameter name="anticipo" class="java.lang.String"/>
+	<parameter name="difem" class="java.lang.String"/>
+	<parameter name="pago1" class="java.lang.String"/>
+	<parameter name="pago2" class="java.lang.String"/>
+	<parameter name="pago3" class="java.lang.String"/>
+	<parameter name="pago4" class="java.lang.String"/>
+	<parameter name="precioR" class="java.lang.String"/>
+	<parameter name="ctaBanco" class="java.lang.String"/>
+	<parameter name="banco" class="java.lang.String"/>
+	<parameter name="clabe" class="java.lang.String"/>
+	<parameter name="numRef" class="java.lang.String"/>
+	<parameter name="dia" class="java.lang.Number"/>
+	<parameter name="mes" class="java.lang.String"/>
+	<parameter name="ano" class="java.lang.String"/>
+	<parameter name="meses" class="java.lang.Number"/>
+	<parameter name="plantilla" class="java.lang.String"/>
+	<parameter name="dias" class="java.lang.Number"/>
+	<parameter name="mesContra" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="13" splitType="Stretch">
+			<elementGroup/>
+			<elementGroup>
+				<elementGroup/>
+			</elementGroup>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="774">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="42"/>
+				<textElement/>
+				<text><![CDATA[CONTRATO DE COMPRAVENTA EN PREVENTA DE BIEN INMUEBLE DESTINADO A CASA HABITACIÓN QUE CELEBRAN, POR UNA PARTE, Y DE MANERA CONJUNTA  CALERMI, S.A. DE C.V. Y CONTROINMUEBLES S.A. DE C.V., AMBAS REPRESENTADAS EN ESTE ACTO POR SUS APODERADOS,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="24" width="100" height="20"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{apoderado1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="463" y="23" width="12" height="20"/>
+				<textElement/>
+				<text><![CDATA[Y]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="473" y="24" width="80" height="20"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{apoderado2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="36" width="493" height="17"/>
+				<textElement/>
+				<text><![CDATA[A LAS QUE EN LO SUCESIVO SE LES DENOMINARÁ “LAS VENDEDORAS”, Y POR LA OTRA PARTE, ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="493" y="36" width="59" height="20"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{campo1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="49" width="549" height="20"/>
+				<textElement/>
+				<text><![CDATA[A QUIEN (ES) EN LO SUCESIVO SE LE(S) DENOMINARÁ ‘’EL COMPRADOR” ”, AL TENOR DE LAS SIGUIENTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="63" width="540" height="19"/>
+				<textElement/>
+				<text><![CDATA[DECLARACIONES Y CLÁUSULAS:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="82" width="138" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[D E C L A R A C I O N E S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="97" width="527" height="45"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[I.- Declaran “LAS VENDEDORAS”:
+
+1).-  CALERMI, S.A. de C.V.,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="122" width="248" height="20"/>
+				<textElement/>
+				<text><![CDATA[ declara a través de sus representantes legales que: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="143" width="20" height="19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[a).- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="156" width="529" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Mexicana,según consta en la escritura pública número 59,310 de fecha 11 de enero de 1985, pasada ante la fe del Lic. Antonio Esperón Díaz Ordaz, titular de la Notaría Pública No. 180 de la Ciudad de México, Distrito Federal, cuyo Primer Testimonio quedó inscrito en el Registro Público de Comercio de la Ciudad de México, Distrito Federal, bajo el folio mercantil número 79272 y que su Registro Federal de Contribuyentes es CAL-850111-MH5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="142" width="496" height="20"/>
+				<textElement/>
+				<text><![CDATA[ Es una sociedad mercantil legalmente constituida de conformidad con las leyes de la  República]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="300" width="20" height="19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[c).- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="301" width="496" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sus representantes legales cuentan con las facultades suficientes para obligar a su representadan en los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="317" width="529" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[términos y condiciones del presente Contrato, según lo acredita con la escritura pública número 67,171 de fecha 27 de junio de 2012, otorgada ante la fe del Lic. Carlos Antonio Morales Montes de Oca, titular de la Notaría Pública número 227 del Distrito Federal, la cual se encuentra debidamente inscrita en el Registro Público de Comercio de la Ciudad de México, Distrito Federal, facultades que a la fecha no les han sido revocadas ni modificadas en forma alguna.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="381" width="20" height="19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[d).- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="382" width="494" height="20"/>
+				<textElement/>
+				<text><![CDATA[Es la única y legítima usufructuaria del predio urbano ubicado en Avenida Tamaulipas No. 1,236, Colonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="395" width="530" height="92"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Colonia Estado de Hidalgo, C.P. 01500, Delegación Álvaro Obregón, México, Distrito Federal, según consta en la escritura pública número 40,308 de fecha 26 de diciembre de 2007, pasada ante la fe del Lic. Carlos Antonio Morales Montes de Oca, titular de la Notaría Pública número 227 de la Ciudad de México, Distrito Federal, cuyo primer testimonio se encuentra en trámite de inscripción en el Registro Público de la Propiedad y el Comercio de la Ciudad de México, Distrito Federal, y que a la fecha de firma del presente contrato dicho predio se encuentra al corriente en el pago del impuesto predial y servicios públicos (en lo sucesivo denominado como “EL PREDIO”).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="488" width="20" height="19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[e).- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="488" width="495" height="20"/>
+				<textElement/>
+				<text><![CDATA[De conformidad con la Manifestación de Construcción tipo “C”,  número AOC-6261-2011, expedida el]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="501" width="532" height="117"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[día 17 de noviembre de 2011 por la Delegación Álvaro Obregón del Distrito Federal, con vigencia del 17 de noviembre de 2011 al 17 de noviembre de 2014, actualmente está construyendo sobre “EL PREDIO” un desarrollo habitacional que se denominará “Puerta Santa Lucía” (en lo sucesivo denominado como “EL CONDOMINIO”), que constará de 56 casas y 160 departamentos, en su caso, sujeto al régimen de propiedad en condominio y que “EL PREDIO”  cuenta con la infraestructura para el adecuado funcionamiento de los servicios de suministro de energía eléctrica,  agua potable, drenaje y alcantarillado, vialidades vehiculares interiores y de conexión con la red vial urbana y demás obras de equipamiento urbano, como se señalan en el proyecto ejecutivo de construcción completo y las licencias, autorizaciones, certificado de uso de suelo y permisos respectivos,mismos que se mostraron a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="602" width="294" height="20"/>
+				<textElement/>
+				<text><![CDATA[“EL COMPRADOR” y están a su disposición para consulta.]]></text>
+			</staticText>
+			<elementGroup>
+				<elementGroup>
+					<staticText>
+						<reportElement x="238" y="622" width="316" height="20"/>
+						<textElement/>
+						<text><![CDATA[se está construyendo el área privativa objeto del presente Contrato]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="50" y="661" width="503" height="20"/>
+						<textElement/>
+						<text><![CDATA[metros cuadrados y las correspondientes áreas de uso común o porcentaje de indiviso que señale la]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="26" y="672" width="524" height="37"/>
+						<textElement/>
+						<text><![CDATA[escritura constitutiva del régimen en propiedad en condominio, incluyendo, en caso de departamento, la propiedad de ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="372" y="649" width="11" height="20"/>
+						<textElement>
+							<font isUnderline="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="404" y="649" width="20" height="20"/>
+						<textElement>
+							<font isUnderline="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{piso}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="93" y="683" width="27" height="20"/>
+						<textElement>
+							<font isUnderline="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{lugarEsta}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="120" y="679" width="355" height="20"/>
+						<textElement/>
+						<text><![CDATA[lugar(es) de estacionamiento ubicado(s) a nivel de vialidad, con número(s)]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="421" y="649" width="129" height="20"/>
+						<textElement/>
+						<text><![CDATA[con una superficie total de]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="26" y="661" width="25" height="20"/>
+						<textElement>
+							<font isUnderline="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{superficie}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="138" y="622" width="100" height="20"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[“EL CONDOMINIO”, ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="382" y="649" width="23" height="20"/>
+						<textElement/>
+						<text><![CDATA[,piso ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="26" y="636" width="528" height="29"/>
+						<textElement>
+							<font isUnderline="false"/>
+						</textElement>
+						<text><![CDATA[de Compraventa, consistente en una casa o departamento con los elementos anexos que le corresponden, (en adelante “LA VIVIENDA”), que en principio se identificará con el número]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="60" y="622" width="78" height="20"/>
+						<textElement/>
+						<text><![CDATA[Como parte de]]></text>
+					</staticText>
+				</elementGroup>
+			</elementGroup>
+			<staticText>
+				<reportElement x="43" y="221" width="19" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[b).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="221" width="493" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Su objeto social le permite realizar actos de comercio, entre otros, adquirir, gravar, dar o tomar en]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="235" width="528" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[arrendamiento y administrar bienes raíces, y en general, realizar respecto de dichos bienes cualquier operación permitida por la ley, incluida la explotación, urbanización, lotificación y colonización de terrenos, la construcción, reedificación y explotación de casas, edificios y, en general, de toda clase de bienes muebles e inmuebles, ejecutar todos los actos jurídicos y celebrar todos los convenios y contratos que se relacionen directa o indirectamente con el objeto social.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="621" width="19" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[f).-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="679" width="66" height="20"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numsEsta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="693" width="308" height="20"/>
+				<textElement/>
+				<text><![CDATA[conforme al Plano de Localización adjunto, cuyas medidas son ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="692" width="43" height="20"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{medidas1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="347" y="693" width="34" height="20"/>
+				<textElement/>
+				<text><![CDATA[m2 por ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="382" y="692" width="22" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{medidas2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="693" width="154" height="20"/>
+				<textElement/>
+				<text><![CDATA[m2,  (en lo sucesivo “EL CAJÓN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="726" width="20" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[g).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="726" width="493" height="20"/>
+				<textElement/>
+				<text><![CDATA[“EL PREDIO” cuenta con autorización de uso de suelo habitacional, de conformidad con el Certificado ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="682" width="64" height="20"/>
+				<textElement/>
+				<text><![CDATA[propiedad de ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="706" width="130" height="20"/>
+				<textElement/>
+				<text><![CDATA[DE ESTACIONAMIENTO”).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="740" width="528" height="28"/>
+				<textElement/>
+				<text><![CDATA[Único de Zonificación de Uso de Suelo, expedido por la Secretaría de Desarrollo Urbano y Vivienda del Distrito Federal, de fecha 4 de marzo de 2011, bajo el folio 8257-181CACA11. ]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="44" y="6" width="22" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[h).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="6" width="490" height="20"/>
+				<textElement/>
+				<text><![CDATA[“EL PREDIO” donde se construye “EL CONDOMINIO” reporta un usufructo como único gravamen, del]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="20" width="487" height="26"/>
+				<textElement/>
+				<text><![CDATA[cual quedará liberado a más tardar en la fecha de firma de la escritura pública de compraventa correspondiente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="45" width="22" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[i).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="46" width="486" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que puso a disposición de “EL COMPRADOR” el proyecto ejecutivo de construcción completo, la ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="57" width="526" height="30"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[maqueta correspondiente y la casa o departamento muestra, según corresponda, así como la documentación que acredita la propiedad de “LA VIVIENDA” .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="87" width="18" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[j).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="87" width="484" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que para el pago del precio de “LA VIVIENDA” objeto de la presente compraventa, aceptará montos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="101" width="524" height="34"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[derivados de créditos que “EL COMPRADOR” reciba de cualquier institución acreditante autorizada para dichos efectos, sujeto a los  plazos, términos y condiciones previstos en el presente contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="155" width="187" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2).- CONTROINMUEBLES, S.A. de C.V., ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="155" width="361" height="20"/>
+				<textElement/>
+				<text><![CDATA[declara  a través de sus representantes legales que:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="177" width="22" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[a).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="177" width="487" height="20"/>
+				<textElement/>
+				<text><![CDATA[Su representada es una sociedad debidamente constituida conforme a las leyes de la República]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="190" width="523" height="53"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Mexicana, según lo acredita con la Escritura Pública 38,693 de fecha 15 de octubre de 2007, pasada ante la fe del Notario Público No. 227 del Distrito Federal, Lic.  Carlos Antonio Morales Montes de Oca, inscrita en el Registro Público de la Propiedad y el Comercio de la Ciudad de México el día 10 de julio de 1985, bajo el folio mercantil 374,690. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="243" width="17" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[b).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="243" width="489" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Sus representantes legales cuentan con las facultades suficientes para obligar a su representada en los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="257" width="526" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[términos y condiciones del presente Contrato, según lo acredita con la escritura pública número 67,171 de fecha 27 de junio de 2012, otorgada ante la fe del Lic. Carlos Antonio Morales Montes de Oca, titular de la Notaría Pública número 227 del Distrito Federal, e inscrita en el Registro Público de Comercio de la Ciudad de México, Distrito Federal, facultades que a la fecha no les han sido revocadas ni modificadas en forma alguna.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="322" width="22" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[c).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="322" width="487" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Es la única y legítima propietaria del predio urbano ubicado en Avenida Tamaulipas No. 1,236,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="335" width="523" height="94"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Colonia Estado de Hidalgo, C.P. 01500, Delegación Álvaro Obregón, de la Ciudad de México, del Distrito Federal, sobre el cual se construirá “EL CONDOMINIO”, según consta en la escritura pública número 40,308 de fecha 26 de diciembre de 2007, pasada ante la fe del Lic. Carlos Antonio Morales Montes de Oca, titular de la Notaría Pública número 227 de la Ciudad de México, Distrito Federal, cuyo primer testimonio se encuentra en trámite de inscripción en el Registro Público de la Propiedad de la Ciudad de México, Distrito Federal, y que a la fecha de firma del presente contrato dicho predio se encuentra al corriente en el pago del impuesto predial y servicios públicos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="427" width="18" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[d).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="427" width="488" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que comparece a la firma del presente instrumento a efecto de otorgar su consentimiento  con los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="441" width="526" height="42"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[términos y condiciones en los que se llevará a cabo, así como para obligarse a firmar la respectiva escritura de compraventa de “LA VIVIENDA” a favor de “EL COMPRADOR”, una vez que se cumplan los plazos y condiciones previstos en el presente contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="486" width="15" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[II.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="486" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[Declara]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="486" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[“EL COMPRADOR” ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="486" width="211" height="20"/>
+				<textElement/>
+				<text><![CDATA[por su propio derecho, que:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="510" width="16" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[a).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="510" width="492" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Es una persona física de nacionalidad mexicana, mayor edad y en pleno ejercicio de sus derechos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="525" width="465" height="20"/>
+				<textElement/>
+				<text><![CDATA[civiles, situación que acredita con su correspondiente Credencial de Elector con  número de folio ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="492" y="525" width="20" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="539" width="270" height="20"/>
+				<textElement/>
+				<text><![CDATA[por el Instituto Federal Electoral, y que su estado civil es]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="525" width="52" height="20"/>
+				<textElement/>
+				<text><![CDATA[, expedida]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="297" y="539" width="60" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{edoCivil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="539" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="559" width="19" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[b).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="559" width="217" height="20"/>
+				<textElement/>
+				<text><![CDATA[Que su Registro Federal de Contribuyentes es]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="284" y="559" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{rfc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="331" y="559" width="222" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[y que señala como su domicilio convencional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="574" width="346" height="20"/>
+				<textElement/>
+				<text><![CDATA[convencional para todos los efectos del presente contrato, el ubicado en]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="375" y="574" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{domicilio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="47" y="594" width="17" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[c).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="594" width="486" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“LAS VENDEDORAS” han puesto a su disposición los documentos, planos y demás datos que señala el]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="574" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="608" width="524" height="41"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[artículo 73 Bis de la Ley Federal de Protección al Consumidor, relacionados con “EL CONDOMINIO” que “LAS VENDEDORAS” están construyendo sobre “EL PREDIO,” incluyendo la información sobre las condiciones en que se encuentran el pago de contribuciones y servicios públicos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="650" width="16" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[d).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="650" width="489" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Previo a la firma del presente contrato, “LAS VENDEDORAS” le han exhibido el proyecto ejecutivo de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="664" width="526" height="41"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[construcción completo, la maqueta correspondiente y LA VIVIENDA muestra, así como la documentación que acredita la propiedad de “EL PREDIO” y las facultades de “LAS VENDEDORAS” para llevar a cabo la compraventa materia del presente instrumento.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="709" width="25" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[III.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="709" width="235" height="20"/>
+				<textElement/>
+				<text><![CDATA[Declaran “LAS PARTES” que:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="729" width="18" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[a).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="729" width="391" height="20"/>
+				<textElement/>
+				<text><![CDATA[Es su espontánea voluntad celebrar el presente contrato al tenor de las siguientes]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="212" y="0" width="112" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C L Á U S U L A S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="20" width="55" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PRIMERA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="20" width="35" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Objeto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="37" width="555" height="58"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“LAS VENDEDORAS” venden con reserva de dominio, ad corpus a “EL COMPRADOR”, quien adquiere para sí el área privativa  especificada en la declaración I inciso f) anterior, (en adelante “LA VIVIENDA”) con el indiviso y los elementos anexos que le correspondan, conforme a la escritura constitutiva del Régimen de Propiedad en Condominio.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="95" width="555" height="28"/>
+				<textElement/>
+				<text><![CDATA[“LA VIVIENDA”  contará  con la ubicación y características técnicas, de seguridad y de estructura que se encuentran especificadas en el ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="108" width="64" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Anexo “A” ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="108" width="401" height="20"/>
+				<textElement/>
+				<text><![CDATA[del presente instrumento, el cual, firmado por ambas partes, forma parte integrante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="119" width="550" height="55"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[mismo. Si al momento de constituir el régimen de propiedad en condominio se modificare la nomenclatura de LA VIVIENDA, “LAS VENDEDORAS” se lo notificarán a “EL COMPRADOR” con 30 días de anticipación al otorgamiento de la escritura pública de compraventa de conformidad con lo establecido en el presente instrumento.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="177" width="65" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEGUNDA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="176" width="44" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Precio: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="197" width="401" height="19"/>
+				<textElement/>
+				<text><![CDATA[Las partes convienen que el precio total de esta compraventa es la cantidad de  $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="392" y="196" width="54" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{precio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="446" y="196" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[, la cual deberá ser ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="212" width="552" height="28"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[totalmente cubierta por “EL COMPRADOR” a “LAS VENDEDORAS”, a más tardar un día hábil antes de  la fecha de otorgamiento de la escritura pública en la que se formalice la compraventa materia de éste contrato. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="251" width="558" height="22"/>
+				<textElement/>
+				<text><![CDATA[“EL COMPRADOR” se obliga a pagar el precio total de “LA VIVIENDA a “LAS VENDEDORAS” de la siguiente forma:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="269" width="24" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[A).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="270" width="96" height="20"/>
+				<textElement/>
+				<text><![CDATA[La cantidad de $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="105" y="269" width="71" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{engm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="176" y="269" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[M.N. (]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="209" y="269" width="65" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{engm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="275" y="269" width="203" height="20"/>
+				<textElement/>
+				<text><![CDATA[00/100 Moneda Nacional), equivalente al]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="474" y="269" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{engp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="540" y="269" width="12" height="20"/>
+				<textElement/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="282" width="2" height="20"/>
+				<textElement/>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="5" y="282" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{engp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="282" width="493" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[por ciento) del precio total pactado, como anticipo o enganche de la compraventa, (en adelante ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="298" width="552" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[‘’EL ENGANCHE’’), el cual será  cubierto por ‘’EL COMPRADOR’’ a ‘’LAS VENDEDORAS’’ de la siguiente manera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="318" width="212" height="17"/>
+				<textElement/>
+				<text><![CDATA[•	Un primer pago por la cantidad de $]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="364" width="274" height="19"/>
+				<textElement/>
+				<text><![CDATA[•	El resto del enganche, es decir la cantidad de $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="213" y="315" width="84" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{anticipo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="282" y="315" width="38" height="20"/>
+				<textElement/>
+				<text><![CDATA[M.N. (]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="315" width="73" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{anticipo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="373" y="315" width="183" height="20"/>
+				<textElement/>
+				<text><![CDATA[00/100 Moneda Nacional) que "LAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="331" width="555" height="33"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[VENDEDORAS” reciben en este acto a su entera conformidad,  otorgando al COMPRADOR el recibo más amplio que en derecho proceda.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="267" y="364" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{difem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="331" y="363" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[M.N. (]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="363" y="364" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{difem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="425" y="364" width="129" height="20"/>
+				<textElement/>
+				<text><![CDATA[00/100 Moneda Nacional),]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="376" width="555" height="33"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[), será cubierto mediante las exhibiciones mensuales que se especifican a continuación, las cuales serán documentadas mediante pagaré(s) no negociable(s), de acuerdo al siguiente calendario de pagos: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="489" width="529" height="20"/>
+				<textElement/>
+				<text><![CDATA[El incumplimiento en tiempo y forma de alguno de estos pagos obliga a “EL COMPRADOR” a pagar un interés]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="504" width="526" height="20"/>
+				<textElement/>
+				<text><![CDATA[mensual del 1.5% durante el tiempo en que dure el atraso.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="524" width="24" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[B).-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="524" width="235" height="20"/>
+				<textElement/>
+				<text><![CDATA[El precio remanente, es decir, la cantidad de $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="249" y="524" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{precioR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="336" y="524" width="219" height="20"/>
+				<textElement/>
+				<text><![CDATA[(en adelante “EL PRECIO INSOLUTO”)   será]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="539" width="554" height="42"/>
+				<textElement/>
+				<text><![CDATA[cubierto a más tardar un día hábil antes de la fecha de firma de la escritura de compraventa, ya sea con recursos propios de “EL COMPRADOR”, o a través de alguna institución acreditante con la que “EL COMPRADOR” hubiere gestionado algún tipo financiamiento para liquidar el precio insoluto de ‘’LA VIVIENDA’’ a entera satisfacción de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="579" width="553" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA["LAS VENDEDORAS".
+
+Únicamente para efectos fiscales y de conformidad con las disposiciones aplicables, el precio total de compraventa establecido en la presente cláusula será considerado como pagado en su totalidad al momento en que sea otorgada la escritura pública de compraventa correspondiente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="656" width="58" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERCERA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="656" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Actualización: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="670" width="555" height="79"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Las partes convienen que el precio insoluto de la compraventa se actualizará mensualmente de manera automática a partir de la fecha de firma del presente contrato, en la misma proporción en que se incremente el Índice Nacional de Precios al Consumidor que publique el Instituto Nacional de Estadística y Geografía en el Diario Oficial de la Federación, o el indicador que en el futuro lo sustituya. “EL COMPRADOR” se obliga a cubrir los incrementos estipulados sin necesidad de requerimiento previo, junto con los pagos subsecuentes a su cargo, de conformidad a lo previsto en la cláusula que antecede.]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="2" y="0" width="554" height="103"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Si al día de la firma de la escritura pública ante Notario Público, por efecto de la conversión del Índice Nacional de Precios al Consumidor, publicado por el Instituto Nacional de Estadística y Geografía, queda un saldo a cubrir por “EL COMPRADOR”, éste se obliga a pagarlo antes de realizar la firma de escrituras ante Notario Público. De no hacerlo, “LAS VENDEDORAS” podrán optar por la rescisión del presente contrato sin necesidad de resolución judicial, restituyéndose las partes las prestaciones que se hubieren hecho conforme al presente Contrato, en cuyo caso, “EL COMPRADOR” quedará obligado a cubrir a favor de “LAS VENDEDORAS” el monto de la pena convencional estipulada en la Cláusula Décima Sexta del presente contrato, mismas que  “LAS VENDEDORAS’’ estarán facultadas para descontar de las cantidades recibidas por parte “EL COMPRADOR” a cuenta del precio pactado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="101" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[pactado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="50" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUARTA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="121" width="129" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Lugar y forma de pago: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="141" width="553" height="30"/>
+				<textElement/>
+				<text><![CDATA[“EL COMPRADOR” realizará los pagos estipulados en la Cláusula Segunda en el domicilio de “LAS VENDEDORAS,” ó mediante depósitos o transferencia electrónica a  la cuenta bancaria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="154" width="56" height="20"/>
+				<textElement/>
+				<text><![CDATA[del Banco ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="336" y="154" width="79" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ctaBanco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="154" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{banco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="168" width="237" height="20"/>
+				<textElement/>
+				<text><![CDATA[a nombre  de CALERMI, S.A. DE C.V., con Clabe]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="236" y="168" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{clabe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="297" y="168" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[y número de referencia]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="408" y="168" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{numRef}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="182" width="555" height="29"/>
+				<textElement/>
+				<text><![CDATA[“LAS VENDEDORAS” podrán modificar el lugar de pago mediante aviso por escrito dado a “EL COMPRADOR” con 15 días naturales de anticipación.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="218" width="555" height="65"/>
+				<textElement/>
+				<text><![CDATA[Lo anterior sin perjuicio de que “LAS VENDEDORAS” adopten medios electrónicos para recibir pagos a través terminales punto de venta en sitio, o cualquier otra forma de pago alternativa.
+
+Dentro de los 3 días siguientes a la recepción de cada pago, ‘’LAS VENDEDORAS’’ entregarán a ‘’EL COMPRADOR’’ el pagaré y  comprobante de pago correspondientes.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="294" width="49" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUINTA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="294" width="176" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Información para Gestionar Crédito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="315" width="554" height="233"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Previa solicitud escrita con 3 (tres) días  de anticipación, “LAS VENDEDORAS” podrán entregar a “EL COMPRADOR” copia de toda la información de “EL PREDIO” y de “LA VIVIENDA” que tengan a su disposición, con el fin de que “EL COMPRADOR” gestione ante una institución acreditante el otorgamiento de crédito, para liquidar “EL PRECIO INSOLUTO” de  “LA VIVIENDA”, de conformidad a lo previsto en la cláusula segunda del presente contrato.
+
+El no otorgamiento del crédito a favor de “EL COMPRADOR” será causal de rescisión  del presente contrato sin necesidad de resolución judicial y sin responsabilidad alguna para ‘’LAS VENDEDORAS’’, salvo que “EL COMPRADOR” avise a “LAS VENDEDORAS”  sobre la denegación del crédito por  parte de la entidad acreditante,  dentro de los 3 (tres) días siguientes  a dicho evento y  reprograme con ”LAS VENDEDORAS” su respectivo calendario de pagos por escrito.
+
+En caso de que “EL COMPRADOR” no informe dentro del plazo estipulado y por escrito a “LAS VENDEDORAS” sobre el no otorgamiento del crédito por parte de la entidad acreditante o, en su caso, no liquide el precio total de la compraventa, a más tardar un día hábil antes de la fecha de escrituración, “LAS  VENDEDORAS” podrán elegir entre exigir el cumplimiento forzoso o la rescisión del presente contrato sin incurrir en responsabilidad alguna y sin necesidad de resolución judicial, quedando obligado ‘’EL COMRPADOR” a cubrir en cualquier caso, a favor de ‘’LAS VENDEDORAS’’, el importe de la pena convencional estipulada en la Cláusula Décima Sexta del presente contrato en cuyo caso, “LAS VENDEDORAS’’ estarán facultadas para descontar su importe de las cantidades recibidas por parte “EL COMPRADOR” a cuenta del precio pactado.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="545" width="423" height="20"/>
+				<textElement/>
+				<text><![CDATA[recibidas por parte “EL COMPRADOR” a cuenta del precio pactado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="579" width="46" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEXTA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="579" width="73" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Escrituración: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="599" width="552" height="150"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“LAS VENDEDORAS” notificarán con 30 (treinta) días naturales de anticipación a “EL COMPRADOR”  la designación del notario público ante el que se formalizará la escritura pública de compraventa, a efecto de que las partes concurran  ante dicho fedatario el día y hora que indiquen “LAS VENDEDORAS” en la notificación, en el entendido que “EL COMPRADOR” deberá liquidar la totalidad del precio pactado y sus respectivas actualizaciones a entera satisfacción de “LAS VENDEDORAS”, con por lo menos un día hábil de anticipación a la fecha de firma de la escritura de compraventa.
+
+Dentro de los 10 (diez) días siguientes a la fecha en que “EL COMPRADOR” reciba la notificación arriba mencionada, éste deberá proporcionar a “LAS VENDEDORAS” copia de la respectiva carta de liberación de crédito que garantice la disponibilidad de fondos para liquidar “EL PRECIO INSOLUTO” de “LA VIVIENDA”, por lo menos un día antes de la fecha de firma de la escritura de compraventa, en su caso.
+]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="2" y="6" width="549" height="202"/>
+				<textElement/>
+				<text><![CDATA[Si “EL COMPRADOR” no cubre con recursos propios o a través de una institución acreditante la totalidad del precio pactado, junto con sus respectivas actualizaciones,  dentro del plazo estipulado, o no asiste sin causa justificada a la firma de la escritura pública de compraventa el día y hora designados para tal efecto, se obliga a cubrir adicionalmente a favor de “LAS VENDEDORAS”, una pena convencional equivalente al 1.5%  del precio total pactado, que deberá cubrir dentro de los 3 (tres) días siguientes en el domicilio de ‘’LAS VENDEDORAS’’, sin necesidad de requerimiento previo. En caso de reincidencia o en caso de que “EL COMPRADOR” no cubra el monto de la pena convencional estipulada, “LAS  VENDEDORAS” podrán rescindir el presente contrato sin incurrir en responsabilidad alguna y sin necesidad de resolución judicial previa, quedando obligado ‘’EL COMRPADOR” a cubrir en cualquier caso, a favor de ‘’LAS VENDEDORAS’’, el importe de la pena convencional estipulada en la Cláusula Décima Sexta del presente contrato.
+
+El costo del avalúo inmobiliario, honorarios, impuesto sobre traslado de dominio, contribuciones, derechos, así como las respectivas comisiones o gastos aplicables por apertura de crédito, en su caso, que se causen con motivo de la compraventa, correrán a cargo de “EL COMPRADOR”, con excepción del impuesto sobre la renta que por ley corresponde pagar a “LAS VENDEDORAS”, quienes a partir de dicha formalización se obliga ante “EL COMPRADOR” a responder por el saneamiento para el caso de evicción.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="224" width="59" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SÉPTIMA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="224" width="60" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Garantía:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="243" width="553" height="106"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“LAS VENDEDORAS” otorgan a “EL COMPRADOR” una Póliza de Garantía sobre “LA VIVIENDA” objeto del presente contrato, misma que deberá ser firmada por ambas partes al momento de la entrega de “LA VIVIENDA”. Dicha garantía estará vigente durante 12 (doce) meses contados a partir de la entrega material de “LA VIVIENDA”, la cual cubre sin costo alguno para “EL COMPRADOR” cualquier acto tendiente a la reparación de los defectos o fallas que presente “LA VIVIENDA.”
+
+"LAS VENDEDORAS” se obligan frente al “COMPRADOR”  a responder por los defectos o vicios ocultos que se mencionan en la presente cláusula hasta que se cumplan todas y cada una de las siguientes condiciones y requisitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="344" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[requisitos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="363" width="15" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="363" width="519" height="20"/>
+				<textElement/>
+				<text><![CDATA[Que “EL COMPRADOR” haya liquidado en su totalidad el valor pactado en este contrato de compra venta.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="385" width="14" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="385" width="522" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que se firme por ambas partes la escritura de compra venta mediante la cual se formalice este contrato ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="401" width="129" height="20"/>
+				<textElement/>
+				<text><![CDATA[ante notario público.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="421" width="11" height="20"/>
+				<textElement/>
+				<text><![CDATA[3)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="421" width="523" height="20"/>
+				<textElement/>
+				<text><![CDATA[Que “EL COMPRADOR” haya recibido “LA VIVIENDA” y hubiere firmado la correspondiente acta de entrega, y]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="441" width="14" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="441" width="516" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que se hayan satisfecho todas y cada una de las obligaciones de “EL  COMPRADOR” derivadas de este]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="456" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[instrumento.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="489" width="554" height="130"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Para hacer efectiva la garantía, “EL COMPRADOR” deberá notificar por escrito dentro del plazo de cobertura a “LAS VENDEDORAS”, las fallas o defectos que hubiese detectado en “LA VIVIENDA”, a fin de que “LAS VENDEDORAS” inicien los trabajos para subsanar dichos desperfectos dentro de los 5 (cinco) días siguientes.
+
+La garantía no aplicará a vicios ocultos que pudieran ser resultado de modificaciones a “LA VIVIENDA” que hayan sido realizadas por “EL COMPRADOR” y/o por variaciones como consecuencia de movimientos o asentamientos telúricos.
+
+“EL COMPRADOR” reconoce y acepta que las garantías de equipos y accesorios serán solicitados directamente por “EL COMPRADOR” a los fabricantes originales y no a través de “LAS VENDEDORAS”.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="630" width="57" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCTAVA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="630" width="105" height="20"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Entrega de Posesión:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="650" width="556" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“LAS VENDEDORAS” se obligan a entregar a “EL COMPRADOR” la posesión material de “LA VIVIENDA” y, en su caso, de “EL CAJÓN DE ESTACIONAMIENTO”, en caso de departamento, dentro de los 15 (quince) días hábiles siguientes a la fecha de firma de la escritura pública de compraventa. Al momento de la entrega de “LA VIVIENDA”, “LAS VENDEDORAS” (o la persona que  éstas designen), realizarán una revisión ocular conjuntamente con “EL COMPRADOR” de las condiciones, acabados, servicios y demás características pactadas por las partes en el ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="714" width="51" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Anexo “A” ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="714" width="502" height="20"/>
+				<textElement/>
+				<text><![CDATA[del presente instrumento. En caso de que “EL COMPRADOR” esté de acuerdo con dichas características,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="731" width="553" height="19"/>
+				<textElement/>
+				<text><![CDATA[las partes firmarán un acta de entrega-recepción de “LA VIVIENDA”.]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="1" y="4" width="56" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOVENA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="4" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Plazo de Entrega: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="554" height="29"/>
+				<textElement/>
+				<text><![CDATA[“LAS VENDEDORAS” se obligan a entregar a “EL COMPRADOR” la propiedad y posesión material de "LA VIVIENDA” libre de todo gravamen y limitación de dominio, a más tardar el día ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="37" width="37" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{dia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="37" width="13" height="20"/>
+				<textElement/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="428" y="37" width="41" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{mes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="469" y="37" width="23" height="20"/>
+				<textElement/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="37" width="37" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ano}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="515" y="37" width="38" height="20"/>
+				<textElement/>
+				<text><![CDATA[, previa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="51" width="552" height="38"/>
+				<textElement/>
+				<text><![CDATA[firma de la escritura de compraventa, salvo que acredite que por caso fortuito o fuerza mayor que las afectó directamente o a “LA VIVIENDA” no pudieran entregarla en dicha fecha, caso en el cual las partes deberán de pactar una nueva fecha de entrega,  otorgándose un plazo de gracia adicional de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="393" y="76" width="31" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{meses}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="415" y="76" width="139" height="20"/>
+				<textElement/>
+				<text><![CDATA[meses (el “Plazo de Gracia”). ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="96" width="554" height="105"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[El Plazo de Gracia se establece en beneficio de “LAS VENDEDORAS”. Las Partes convienen en extender este periodo si por razones no imputables a “LAS VENDEDORAS”, las autoridades no otorgan en tiempo y forma los diversos permisos y licencias para poder construir, desarrollar, entregar y ocupar “LA VIVIENDA” o “EL CONDOMINIO.”
+
+Si una vez que “EL COMPRADOR” se encuentre en pleno uso y goce de “LA VIVIENDA”, éste se percata de la existencia de vicios ocultos en “LA VIVIENDA”, deberá notificar dicha situación oportunamente a “LAS VENDEDORAS” por escrito de conformidad con la Cláusula Séptima.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="205" width="50" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="205" width="115" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Reserva de Dominio: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="556" height="52"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[En los términos del artículo 2312 del Código Civil para el Distrito Federal, “LAS VENDEDORAS” se reservan expresamente el dominio sobre “LA VIVIENDA,” hasta en tanto “EL COMPRADOR” haya pagado la totalidad del precio en términos de lo dispuesto en la Cláusula Segunda anterior, incluyendo, en su caso, actualizaciones, intereses moratorios y cualquier otra obligación a cargo de “EL COMPRADOR” derivada del presente Contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="286" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA PRIMERA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="286" width="136" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Ajuste de Superficie:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="306" width="554" height="43"/>
+				<textElement/>
+				<text><![CDATA[En virtud de que “EL CONDOMINIO” se encuentra en proceso de construcción, las partes están de acuerdo que la superficie de “LA VIVIENDA” podrá tener una variación de  2% (más/menos dos por ciento) respecto de la superficie pactada en el presente contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="353" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA SEGUNDA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="353" width="132" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Deceso del Comprador: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="373" width="554" height="145"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[En caso de deceso de “EL COMPRADOR”, “LAS VENDEDORAS” restituirán al legítimo sucesor, de conformidad con disposición judicial o testamentaria, el importe total de los que hayan recibido con motivo de este Contrato.
+
+“LAS VENDEDORAS”  en este acto convienen en que el legítimo sucesor de los derechos, de conformidad con disposición judicial o testamentaria, tendrá un derecho de preferencia para celebrar un nuevo contrato de Compraventa sobre “LA VIVIENDA”, siempre que demuestre su capacidad para cumplir con los términos y condiciones del presente Contrato, para adquirir dicho inmueble.
+
+Si las partes han firmado la escritura pública de compraventa, al momento en que ocurra el deceso de “EL COMPRADOR”, “LAS VENDEDORAS” sólo tienen obligación de entregar “LA VIVIENDA” con su respectivo “CAJÓN DE ESTACIONAMIENTO”, en su caso,  a su legítimo sucesor, en los términos pactados en la presente cláusula.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="519" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA TERCERA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="519" width="62" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Destino: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="539" width="455" height="16"/>
+				<textElement/>
+				<text><![CDATA[A fin de preservar el entorno urbanísimo y arquitectónico, así como la seguridad estructural de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="539" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[“EL CONDOMINIO” ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="553" width="552" height="65"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[que actualmente construyen “LAS VENDEDORAS”, “EL COMPRADOR” se obliga a no demoler parcial o totalmente los muros, ni construir o edificar obra alguna en “LA VIVIENDA” y en el lote de terreno donde éste se encuentra construida. Asimismo, “EL COMPRADOR” se obliga a destinar exclusivamente “LA VIVIENDA” a uso habitacional, por lo que le está prohibido instalar en el mismo cualquier tipo de comercio. “EL COMPRADOR” asimismo está obligado a respectar los colores y acabados exteriores establecidos para todas las edificaciones que se realicen en]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="618" width="100" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[“EL CONDOMINIO”. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="641" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA CUARTA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="641" width="131" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Régimen en Condominio: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="661" width="552" height="43"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Toda vez que “LA VIVIENDA” estará construido bajo el régimen de propiedad en condominio, “EL COMPRADOR” acepta sujetarse a la Ley de Propiedad en Condominio de Inmuebles para el Distrito Federal, así como a los estatutos de dicho régimen, proyecto de los cuales se le entregarán el día de la escrituración ante Notario Público]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="701" width="62" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Anexo “E”,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="701" width="496" height="20"/>
+				<textElement/>
+				<text><![CDATA[el cual firmado por las partes, formará parte integrante del mismo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="732" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA QUINTA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="732" width="135" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Quejas y Reclamaciones: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="733" width="554" height="40"/>
+				<textElement/>
+				<text><![CDATA[
+Las quejas, reclamaciones e inconformidades que tuviere “EL COMPRADOR” por incumplimiento a las obligaciones]]></text>
+			</staticText>
+		</band>
+		<band height="776">
+			<staticText>
+				<reportElement x="1" y="0" width="555" height="44"/>
+				<textElement/>
+				<text><![CDATA[de “LAS VENDEDORAS,” deberán ser canalizadas para su atención al número telefónico 52-69-80-00, Ext. 8078, en horario de lunes a viernes de las 8:00 a las 18:00 horas, o bien, directamente en las oficinas  de “EL COMPRADOR,” ubicadas en el domicilio que se menciona en la Cláusula Décima Octava.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="46" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA SEXTA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="46" width="196" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Pena Convencional y Cancelación: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="66" width="554" height="136"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[En caso de que el presente contrato se rescinda, o se de por terminado por cualquier causa imputable a ‘’EL COMPRADOR’’, causará una pena convencional a cargo de éste y a favor de “LAS VENDEDORAS”, por un monto equivalente a la Tasa de Interés Interbancaria de Equilibrio a 28 días que publique el Banco de México en el Diario Oficial de la Federación el día de la terminación del contrato, más tres puntos porcentuales, sobre el precio total de compraventa establecido en la Cláusula Segunda, en cuyo caso, “LAS VENDEDORAS” podrán retener la pena convencional de aquella cantidad entregada por “EL COMPRADOR” a cuenta del precio de ‘’LA VIVIENDA’’. Las cantidades que resultaren excedentes a favor de “EL COMPRADOR”, deberán ser devueltas dentro de los 15 (quince) días naturales siguientes al aviso de rescisión o terminación.
+
+La misma penalización aplicará en caso de que ‘’EL COMPRADOR’’ decida cancelar el presente contrato, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA SÉPTIMA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="210" width="118" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Rescisión del Contrato: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="230" width="551" height="37"/>
+				<textElement/>
+				<text><![CDATA[De manera enunciativa, más no limitativa, las partes convienen en que serán causas de rescisión del presente Contrato, sin necesidad de declaración judicial al respecto, las siguientes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="267" width="22" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="267" width="492" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[La falta de cumplimiento por cualquiera de las partes de las obligaciones a su respectivo cargo en]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="283" width="247" height="20"/>
+				<textElement/>
+				<text><![CDATA[términos del presente Contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="303" width="14" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[(b)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="303" width="490" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[La falta de pago oportuno y/o completo de cualquier parte del Precio y/o de cualquier otro pago a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="319" width="512" height="20"/>
+				<textElement/>
+				<text><![CDATA[cargo de “EL COMPRADOR”, conforme a las estipulaciones del presente instrumento,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="339" width="19" height="20"/>
+				<textElement/>
+				<text><![CDATA[(c)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="339" width="497" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[La falta de cumplimiento oportuno de las obligaciones a cargo de “EL COMPRADOR” relativas a la]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="357" width="552" height="34"/>
+				<textElement/>
+				<text><![CDATA[obtención del crédito para pagar “EL PRECIO INSOLUTO” de “LA VIVIENDA”, en un plazo máximo de ___ días contados a partir de la fecha de firma del presente contrato, conforme a lo pactado en la Cláusula Segunda.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="401" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA OCTAVA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="401" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Domicilios: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="421" width="554" height="71"/>
+				<textElement/>
+				<text><![CDATA[Todas las notificaciones, requerimientos, autorizaciones, renuncias, avisos y otras comunicaciones que deban darse conforme a este Contrato, podrán realizarse por cualquier medio, salvo las previstas en las Cláusulas Primera,  Segunda y Séptima del presente Contrato, que deberán hacerse por escrito y deberán considerarse como debidamente entregadas si se encuentran firmadas por el respectivo representante legal o persona que las envía,  y entregadas con acuse de recibo en los siguientes domicilios:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="632" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA NOVENA.- ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="632" width="151" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cesión y Gravámenes: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="652" width="552" height="112"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[“EL COMPRADOR” no podrá ceder o transmitir en forma alguna los derechos y obligaciones asumidos en el presente contrato, sin contar con la autorización previa y por escrito de “LAS VENDEDORAS.”
+
+“LAS VENDEDORAS” podrán en cualquier momento ceder los derechos y obligaciones del presente Contrato, incluyendo los derechos de cobro inherentes al precio de la compraventa y demás prestaciones pactadas, así como hipotecar o gravar en cualquier forma “EL PREDIO” en favor de la persona física o moral que éste designe sin necesidad de obtener el consentimiento previo de “EL COMPRADOR,” obligándose a  entregar “LA VIVIENDA” libre de cualquier gravamen o restricción de dominio al momento de la escrituración.
+]]></text>
+			</staticText>
+		</band>
+		<band height="286">
+			<staticText>
+				<reportElement x="3" y="3" width="64" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[VIGÉSIMA.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="3" width="120" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Jurisdicción: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="23" width="552" height="94"/>
+				<textElement/>
+				<text><![CDATA[Para resolver cualquier controversia que se suscite sobre la interpretación o cumplimiento del presente Contrato, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, Distrito Federal, renunciando expresamente a cualquier otra jurisdicción que pudiera corresponderles, por razón de sus domicilios presentes o futuros o por cualquier otra razón.
+
+Leído que fue por las partes el contenido del presente Contrato y sabedoras de su alcance legal, lo firman por duplicado en la Ciudad de ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="132" y="99" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{plantilla}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="197" y="101" width="28" height="20"/>
+				<textElement/>
+				<text><![CDATA[a los]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="99" width="43" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{dias}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="100" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[días de mes de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="321" y="101" width="63" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{mesContra}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="100" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[del dos mil ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="126" width="545" height="20"/>
+				<textElement/>
+				<text><![CDATA[Entregándosele una copia del mismo a “EL COMPRADOR.” ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="165" width="132" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[“LAS VENDEDORAS”]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="179" width="138" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CALERMI, S.A. DE C.V.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="23" y="267" width="190" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="31" y="190" width="178" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTROINMUEBLES, S.A. DE C.V]]></text>
+			</staticText>
+			<line>
+				<reportElement x="346" y="267" width="169" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="397" y="185" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[“EL COMPRADOR”]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<elementGroup/>
+			<textField>
+				<reportElement x="165" y="-1" width="146" height="13"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="false">
+				<reportElement key="textField-3" x="325" y="0" width="90" height="13"/>
+				<textElement>
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "  +String.valueOf($V{PAGE_NUMBER})+""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

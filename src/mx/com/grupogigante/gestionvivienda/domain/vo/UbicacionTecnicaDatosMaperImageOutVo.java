@@ -1,0 +1,41 @@
+package mx.com.grupogigante.gestionvivienda.domain.vo;
+
+public class UbicacionTecnicaDatosMaperImageOutVo {
+	String idUbicacion;
+	String urlImagen;
+	String nombreImagen;
+	String fechaAlta;
+	String fechaActualizacion;
+	
+	public String getIdUbicacion() {
+		return idUbicacion;
+	}
+	public void setIdUbicacion(String idUbicacion) {
+		this.idUbicacion = idUbicacion;
+	}
+	public String getUrlImagen() {
+		return urlImagen;
+	}
+	public void setUrlImagen(String urlImagen) {
+		this.urlImagen = urlImagen;
+	}
+	public String getNombreImagen() {
+		return nombreImagen;
+	}
+	public void setNombreImagen(String nombreImagen) {
+		this.nombreImagen = nombreImagen;
+	}
+	public String getFechaAlta() {
+		return fechaAlta;
+	}
+	public void setFechaAlta(String fechaAlta) {
+		this.fechaAlta = fechaAlta;
+	}
+	public String getFechaActualizacion() {
+		return fechaActualizacion;
+	}
+	public void setFechaActualizacion(String fechaActualizacion) {
+		this.fechaActualizacion = fechaActualizacion;
+	}
+	
+}
